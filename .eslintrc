@@ -1,0 +1,51 @@
+{
+    "extends": [
+        "plugin:vue/recommended",
+        "airbnb-base",
+    ],
+    "plugins": [
+        "vue"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "Framework": true
+    },
+    "rules": {
+        "semi": [2, "never"],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "no-console": "off",
+        "linebreak-style": [0, "error", "windows"],
+        //fixes an issue with Express
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next|value|to|from|savedPosition" }],
+        "vue/html-self-closing": "off",
+        "vue/html-closing-bracket-newline": ["error", {
+            "singleline": "never",
+            "multiline": "always"
+          }],
+          "no-param-reassign": [
+            "error",
+            {
+              "props": true,
+              "ignorePropertyModificationsFor": [
+                "state",
+                "acc",
+                "e",
+                "ctx",
+                "req",
+                "request",
+                "res",
+                "response",
+                "$scope"
+              ]
+            }
+          ],
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "parser": "babel-eslint"
+    }
+}
