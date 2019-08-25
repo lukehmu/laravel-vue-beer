@@ -6,9 +6,15 @@
 <script>
 export default {
   name: 'Welcome',
+  props: {
+    message: {
+      type: String,
+      default: 'default message',
+    },
+  },
   data() {
     return {
-      message: 'HI',
+      genericData: 'HI',
     }
   },
 }

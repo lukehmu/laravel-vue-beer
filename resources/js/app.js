@@ -4,10 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap')
-
 window.Vue = require('vue')
 
+require('./bootstrap')
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -16,10 +15,10 @@ window.Vue = require('vue')
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+const files = require.context('./', true, /\.vue$/i)
+files.keys().map((key) => Vue.component(key.split('/').pop().split('.')[0], files(key).default)) // eslint-disable-line
 
-Vue.component('welcome', require('./components/Welcome.vue')) // eslint-disable-line no-undef
+// Vue.component('welcome', require('./components/Welcome.vue')) // eslint-disable-line no-undef
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,6 +26,6 @@ Vue.component('welcome', require('./components/Welcome.vue')) // eslint-disable-
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+const app = new Vue({ // eslint-disable-line
   el: '#app',
 })

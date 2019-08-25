@@ -8,7 +8,7 @@ window._ = require('lodash')
 
 try {
   window.Popper = require('popper.js').default // eslint-disable-line
-  window.$ = window.jQuery = require('jquery') // eslint-disable-line
+  // window.$ = window.jQuery = require('jquery') // eslint-disable-line
 
   require('bootstrap') // eslint-disable-line
 } catch (e) {} // eslint-disable-line
