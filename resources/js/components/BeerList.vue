@@ -1,17 +1,21 @@
 <template>
-  <div class="flex-center position-ref full-height">
-    <ul>
-      <li
-        v-for="beer in beers"
-        :key="beer.id"
-      >
-        <!-- {{ beer.id }} -->
-        <a :href="`${route + beer.id}`">{{ beer.name }}</a>
-        {{ beer.description }}
-        {{ beer.percentage }}%
-      </li>
-    </ul>
-  </div>
+  <v-app>
+    <v-card
+      v-for="beer in beers"
+      :key="beer.id"
+
+      max-width="400"
+      tile
+    >
+      <v-list-item three-line>
+        <v-list-item-content>
+          <v-list-item-title><a :href="`${route + beer.id}`">{{ beer.name }}</a></v-list-item-title>
+          <v-list-item-subtitle>{{ beer.description }}</v-list-item-subtitle>
+          <v-list-item-subtitle>{{ beer.percentage }}%</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-card>
+  </v-app>
 </template>
 <script>
 export default {
