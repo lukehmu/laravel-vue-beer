@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-container>
     <v-card
       v-for="beer in beers"
       :key="beer.id"
@@ -15,7 +15,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-card>
-  </v-app>
+  </v-container>
 </template>
 <script>
 export default {

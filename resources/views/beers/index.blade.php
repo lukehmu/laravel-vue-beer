@@ -12,12 +12,13 @@
 </head>
 
 <body>
-@include('partials.nav')
+
     <div id="app">
-        <beer-list :beers='@json($beers)'route='{{ route('beers.index') }}/'></beer-list>
+        @include('partials.nav')
+            <beer-list :beers='@json($beers)'route='{{ route('beers.index') }}/'></beer-list>
     </div>
 
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 </body>
 
 </html>

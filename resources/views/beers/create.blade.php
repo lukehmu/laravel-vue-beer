@@ -7,6 +7,7 @@
         <title>Laravel Vue</title>
     </head>
     <body>
+        <div id="app">
             @include('partials.nav')
 
 
@@ -70,8 +71,7 @@
                 </div>
             </div>
         </form> --}}
-            <div id="app">
             </div>
-            <script type="text/javascript" src="js/app.js"></script>
+            <script type="text/javascript" src="/js/app.js"></script>
         </body>
 </html>
